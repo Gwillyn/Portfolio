@@ -236,7 +236,7 @@ body {
 
 /*Media queries to fix for display size*/
 
-@media only screen and (max-width: 900px) and (min-height: 2000px) {
+@media only screen and (max-width: 1300px) and (min-height: 2000px) {
     #about {
         height: 95vh;
     }
