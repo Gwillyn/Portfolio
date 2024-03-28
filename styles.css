@@ -239,7 +239,7 @@ body {
 @media only screen and (max-width: 1300px) and (min-height: 2000px) {
    
 	html {
-        width: 900px;
+        max-width: 900px;
     }
 	#about {
         height: 95vh;
