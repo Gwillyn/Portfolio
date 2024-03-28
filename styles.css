@@ -3,7 +3,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition-duration: 150ms;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(rgb(10, 35, 55), rgb(6, 19, 34));
 }
@@ -19,8 +25,8 @@ body {
     border-radius: 10px;
     background: linear-gradient(185deg, #843d00, #6c3301);
     z-index: 2;
-    border: 1px solid black
-        /*Make navbar similar to the #work bar, nice and asthetic*/
+    border: 1px solid black;
+    /*Make navbar similar to the #work bar, nice and asthetic*/
 }
 
 .navbar ul {
@@ -30,40 +36,42 @@ body {
     justify-content: end;
     align-items: center;
     gap: 30px;
-    padding-right: 30px;
+    padding-right: 20px;
     font-size: 23px;
-    
+
+
+
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+
 }
 
 .navbar li:hover {
-    transform: scale(1.1);
-    padding-top: 1.5px;
-    
-    
+    transform: scale(1.1) rotate(2deg);
+
+
+
+
 }
 
 /*orients the rest of the document to sit below the navbar (adds color too)*/
-main, footer {
-    padding-top: 70px;
-}
 
 /*About section elements*/
 #about {
     display: flex;
     width: 100%;
-    height: 85vh;
+    height: 110vh;
     place-items: center;
     flex-direction: column;
 
 }
 
 #about h1 {
-    margin-top: 25vh;
+    margin-top: 18vh;
     transform: scale(2);
     padding-bottom: 2px;
     color: white;
@@ -75,6 +83,20 @@ main, footer {
     letter-spacing: 2.4px;
     padding-left: 60px;
     color: #9a4700;
+    margin-bottom: 20px;
+}
+
+.gwillyn-image {
+    display: flex;
+    width: 550px;
+    height: 550px;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: url(https://avatars.githubusercontent.com/u/163878088?v=4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 4px 4px;
+
 }
 
 /*Work section elements*/
@@ -89,7 +111,7 @@ main, footer {
     box-shadow: 2px 2px 2px 2px;
     border-radius: 10px 10px 0% 0%;
     border: 1px solid black;
-    margin-bottom: 40px
+    margin-bottom: 40px;
 }
 
 #work .project-links {
@@ -99,43 +121,55 @@ main, footer {
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 40px;
-
 }
 
-.project-links #baileytribute {
-    width: 500px;
-    height: 350px;
-    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
-    box-shadow: 0px 0px 3px 3px;
-    border: 1px solid black;
+#baileytribute,
+#survey,
+#unknown {
+    width: 622px;
+    height: 395px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: 0px 0px 3px 3px black;
+    border: 3px solid white;
+    background-color: white;
     border-radius: 10px;
-
-
 }
 
-.project-links #survey {
-    width: 500px;
-    height: 350px;
-    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
-    box-shadow: 0px 0px 3px 3px;
-    border: 1px solid black;
-    border-radius: 10px;
-
+#baileytribute {
+    background-image: url(https://lh3.googleusercontent.com/drive-viewer/AKGpiha_omQfQdQ_pvskIeXQs7l6YCUXDtpHinCDNbA1kKGfaaSOumcHaHpLD8GjqTQY-5fJfzyX9uI0HRx4OP89PaIM73Y1=s1600-v0);
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
-.project-links #unknown {
-    width: 500px;
-    height: 350px;
-    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
-    box-shadow: 0px 0px 3px 3px;
-    border: 1px solid black;
-    border-radius: 10px;
+#survey {
+        background-image: url(https://lh3.googleusercontent.com/drive-viewer/AKGpihY4fxdredsKG_ESZAaTNgTHVcY6DuGRLCJmm0UeaRxqhxSQ4HbCa7Y-Up4JIxt04AxUPEyUKQg-XjTcbnXfJiKkWH0q0Q=s1600-v0);
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    
+}
 
+#baileytribute:hover,
+#survey:hover,
+#unknown:hover {
+    -webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 
 
 /*Contact section elements*/
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
 
 #contact-info h2 {
     text-align: center;
@@ -143,7 +177,7 @@ main, footer {
     padding-top: 10px;
     width: 170px;
     height: 55px;
-    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301); 
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
     border-radius: 10px 10px 0 0;
     box-shadow: 2px 2px 2px 2px;
     margin-left: 40px;
@@ -157,26 +191,38 @@ main, footer {
     justify-content: space-around;
     flex-direction: row;
     margin-bottom: 40px;
+    width: 100%;
+    max-width: 900px;
 }
 
 
 
-.github, .instagram, .mail, .phone {
-    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301); 
+.github,
+.instagram,
+.mail,
+.phone {
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
     width: 70px;
     padding: 10px 0 0 10px;
     border-radius: 10px 10px 10px 10px;
     padding-bottom: 6px;
     box-shadow: 2px 2px 2px 2px;
-    
-    
+
+
 }
-.github a, .instagram a, .mail a, .phone a {
+
+.github a,
+.instagram a,
+.mail a,
+.phone a {
     text-decoration: none;
     color: black;
 }
 
-.github:hover, .instagram:hover, .mail:hover, .phone:hover {
+.github:hover,
+.instagram:hover,
+.mail:hover,
+.phone:hover {
     transform: scale(1.1) rotate(6deg);
 
 }
