@@ -1,0 +1,191 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(rgb(10, 35, 55), rgb(6, 19, 34));
+}
+
+/*Navbar element that remains at the top of the screen*/
+.navbar {
+    height: 60px;
+    position: fixed;
+    box-shadow: 2px 2px 2px 2px;
+    top: 20px;
+    width: 300px;
+    right: 40px;
+    border-radius: 10px;
+    background: linear-gradient(185deg, #843d00, #6c3301);
+    z-index: 2;
+    border: 1px solid black
+        /*Make navbar similar to the #work bar, nice and asthetic*/
+}
+
+.navbar ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    padding-right: 30px;
+    font-size: 23px;
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    padding-top: 1.5px;
+    
+    
+}
+
+/*orients the rest of the document to sit below the navbar (adds color too)*/
+main, footer {
+    padding-top: 70px;
+}
+
+/*About section elements*/
+#about {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    place-items: center;
+    flex-direction: column;
+
+}
+
+#about h1 {
+    margin-top: 25vh;
+    transform: scale(2);
+    padding-bottom: 2px;
+    color: white;
+}
+
+#about p {
+
+    font-size: 20px;
+    letter-spacing: 2.4px;
+    padding-left: 60px;
+    color: #9a4700;
+}
+
+/*Work section elements*/
+#work h2 {
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
+    width: 400px;
+    font-size: 26px;
+    text-align: center;
+    height: 55px;
+    padding-top: 10px;
+    margin-left: 40px;
+    box-shadow: 2px 2px 2px 2px;
+    border-radius: 10px 10px 0% 0%;
+    border: 1px solid black;
+    margin-bottom: 40px
+}
+
+#work .project-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+
+}
+
+.project-links #baileytribute {
+    width: 500px;
+    height: 350px;
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
+    box-shadow: 0px 0px 3px 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+
+}
+
+.project-links #survey {
+    width: 500px;
+    height: 350px;
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
+    box-shadow: 0px 0px 3px 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.project-links #unknown {
+    width: 500px;
+    height: 350px;
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
+    box-shadow: 0px 0px 3px 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+
+
+/*Contact section elements*/
+
+#contact-info h2 {
+    text-align: center;
+    font-size: 26px;
+    padding-top: 10px;
+    width: 170px;
+    height: 55px;
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301); 
+    border-radius: 10px 10px 0 0;
+    box-shadow: 2px 2px 2px 2px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border: 1px solid black
+}
+
+#contact {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+
+
+.github, .instagram, .mail, .phone {
+    background: linear-gradient(90deg, #6c3301, #843d00, #6c3301); 
+    width: 70px;
+    padding: 10px 0 0 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom: 6px;
+    box-shadow: 2px 2px 2px 2px;
+    
+    
+}
+.github a, .instagram a, .mail a, .phone a {
+    text-decoration: none;
+    color: black;
+}
+
+.github:hover, .instagram:hover, .mail:hover, .phone:hover {
+    transform: scale(1.1) rotate(6deg);
+
+}
+
+
+
+
+
+
+
+
+/*Media queries to fix for display size*/
