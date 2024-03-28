@@ -329,3 +329,16 @@ body {
     }
 
 }
+@media only screen and (max-height: 680px) {
+
+    .gwillyn-image {
+        display: flex;
+        width: 300px;
+        height: 300px;
+    }
+    #about {
+        height: 540px;
+    
+    
+    }
+}
