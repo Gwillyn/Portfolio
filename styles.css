@@ -237,10 +237,6 @@ body {
 /*Media queries to fix for display size*/
 
 @media only screen and (orientation: portrait) {
-   
-	html {
-        max-width: 900px;
-    }
 	#about {
         height: 95vh;
     }
