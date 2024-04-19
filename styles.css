@@ -67,6 +67,7 @@ body {
     height: 110vh;
     place-items: center;
     flex-direction: column;
+    
 
 }
 
@@ -153,6 +154,7 @@ body {
 
 .imageText {
     position: relative;
+    color: black;
     opacity: 1;
     font-weight: 1000;
     background:linear-gradient(90deg, #6c3301, #843d00, #6c3301);
@@ -161,21 +163,22 @@ body {
     border: 1px solid black;
     box-shadow: 2px 2px 2px 2px black;
     opacity: 0;
-    top: 100px;
+    top: 40%;
 }
 #baileytribute:hover .imageText,
 #survey:hover .imageText,
 #gonik:hover .imageText {
     opacity: 1;
+    transition-duration: 1.2s;
 }
 #baileytribute .imageText {
-    left: 26%;
+    left: 33%;
 }
 #gonik .imageText {
-    left: 27%;
+    left: 33%;
 }
 #survey .imageText {
-    left: 15%;
+    left: 25%;
 }
 
 
@@ -282,7 +285,12 @@ body {
     #about p {
     
         font-size: 16px;
-       
+    }
+    .imageText {
+        opacity: 1;
+        top: -7%;
+        font-size: 20px;
+        font-weight: 1000;
     }
     .gwillyn-image {
         width: 450px;
@@ -295,6 +303,16 @@ body {
         padding-top: 10px;
         margin-left: 10px;
     }
+    #baileytribute .imageText {
+        left: 33%;
+    }
+    #gonik .imageText {
+        left: 34%;
+    }
+    #survey .imageText {
+        left: 25%;
+    }
+    
     #baileytribute,
 #survey,
 #gonik {
@@ -323,7 +341,7 @@ body {
     #about {
         height: 540px;
     }
-   
+
 
 }
 
@@ -334,8 +352,15 @@ body {
         width: 300px;
         height: 300px;
     }
+    
     #about {
         height: 540px;
     }
     
+}
+
+@media only screen and (max-height: 1000px) {
+.imageText {
+    opacity: 1;
+}
 }
