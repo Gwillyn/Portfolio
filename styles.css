@@ -18,7 +18,7 @@ body {
 .navbar {
     height: 60px;
     position: fixed;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 0px 2px;
     top: 20px;
     width: 300px;
     right: 40px;
@@ -64,7 +64,7 @@ body {
 #about {
     display: flex;
     width: 100%;
-    height: 110vh;
+    height: 700px;
     place-items: center;
     flex-direction: column;
     
@@ -89,14 +89,14 @@ body {
 
 .gwillyn-image {
     display: flex;
-    width: 550px;
-    height: 550px;
+    width: 450px;
+    height: 450px;
     border: 4px solid white;
     border-radius: 50%;
     background: url(https://avatars.githubusercontent.com/u/163878088?v=4);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 0px 4px 4px;
+    box-shadow: 0px 0px 0px 5px;
 
 }
 
@@ -109,7 +109,7 @@ body {
     height: 55px;
     padding-top: 10px;
     margin-left: 40px;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 0 2px;
     border-radius: 10px 10px 0% 0%;
     border: 1px solid black;
     margin-bottom: 40px;
@@ -135,11 +135,10 @@ body {
 #gonik {
     width: 622px;
     height: 395px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    box-shadow: 0px 0px 3px 3px black;
+    box-shadow: 2px 2px 0 2px black;
     border: 3px solid white;
     background-color: white;
     border-radius: 10px;
@@ -149,7 +148,7 @@ body {
 
 
 #baileytribute {
-    background-image: url(https://lh3.googleusercontent.com/drive-viewer/AKGpihY6Ulr2NhTUqhNphTHuWkpNmOU_kiZB1EtHVGOjZKxV8_KGeAO2U4xrqiGS1rLA2pbecUSOWCvi1zHUeizg3tI8aOQWW51oiMY=s1600-rw-v1);
+    background-image: url(/images/store.png);
 }
 
 .imageText {
@@ -161,7 +160,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
-    box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 2px 2px 0 2px black;
     opacity: 0;
     top: 40%;
 }
@@ -169,21 +168,22 @@ body {
 #survey:hover .imageText,
 #gonik:hover .imageText {
     opacity: 1;
-    transition-duration: 1.2s;
+    transition-duration: 1s;
 }
 #baileytribute .imageText {
-    left: 33%;
+    left: 36%;
 }
 #gonik .imageText {
-    left: 33%;
+    left: 34%;
 }
 #survey .imageText {
-    left: 25%;
+    left: 34%;
+ 
 }
 
 
 #survey {
-        background-image: url(https://lh3.googleusercontent.com/drive-viewer/AKGpihZaAp9dzRK3eeQjPrycLzXLQ1RC7Agw_MN3RRxcuDS08wYCI8dhlq1NIB7-_i3geeaUjOFmF_TVBqNJosyZWpsmodROyl2O9yA=s1600-rw-v1);
+        background-image: url(/images/Guard\ study.png);
         
     
 }
@@ -196,7 +196,7 @@ body {
 }
 
 #gonik {
-    background-image: url(https://lh3.googleusercontent.com/drive-viewer/AKGpihaKVnOauf_ynYjCWjzIzTrRrtY6iUX-q8Rc7MIZiElfXkGltLrl6mYD0XuK1Iht9eouyPzEg8xENqLsaWscWKmgPFAAw0PGqEA=s1600-v0);
+    background-image: url(/images/gonik\ image\ 2.png);
     background-size: cover;
 }
 
@@ -208,6 +208,10 @@ body {
     display: flex;
     justify-content: center;
 }
+.contact-container:hover * {
+opacity: 1;
+transition-duration: 700ms;
+}
 
 #contact-info h2 {
     text-align: center;
@@ -217,7 +221,7 @@ body {
     height: 55px;
     background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
     border-radius: 10px 10px 0 0;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 0 2px;
     margin-left: 40px;
     margin-bottom: 40px;
     border: 1px solid black
@@ -244,10 +248,27 @@ body {
     padding: 10px 0 0 10px;
     border-radius: 10px 10px 10px 10px;
     padding-bottom: 6px;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 0 2px;
 
 
 }
+.contact-container-text {
+margin-top: 12px;
+text-align: center;
+font-size: 15px;
+padding-top: 3px;
+padding-left: 2px;
+padding-right: 2px;
+font-weight: bold;
+/* background-color: white; */
+border-radius: 5px;
+background: linear-gradient(90deg, #6c3301, #843d00, #6c3301);
+border: 1px solid black;
+height: 25px;
+box-shadow: 2px 2px 0 2px;
+opacity: 0;
+}
+
 
 .github a,
 .instagram a,
@@ -261,9 +282,11 @@ body {
 .instagram:hover,
 .mail:hover,
 .phone:hover {
-    transform: scale(1.1) rotate(6deg);
-
+    transform: scale(1.1) rotate(2deg);
+    transition-duration: 150ms;
 }
+
+
 
 
 
@@ -274,7 +297,7 @@ body {
 
 /*Media queries to fix for display size*/
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 900px) {
     #about {
         height: 95vh;
     }
@@ -304,13 +327,13 @@ body {
         margin-left: 10px;
     }
     #baileytribute .imageText {
-        left: 33%;
+        left: 35%;
     }
     #gonik .imageText {
-        left: 34%;
+        left: 33%;
     }
     #survey .imageText {
-        left: 25%;
+        left: 33%;
     }
     
     #baileytribute,
@@ -318,10 +341,6 @@ body {
 #gonik {
     width: 400px;
     height: 255px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     box-shadow: 0px 0px 3px 3px black;
     border: 3px solid white;
     background-color: white;
@@ -341,11 +360,14 @@ body {
     #about {
         height: 540px;
     }
+    .imageText {
+        opacity: 1;
+    }
 
 
 }
 
-@media only screen and (max-height: 730px) {
+@media only screen and (max-height: 700px) {
 
     .gwillyn-image {
         display: flex;
@@ -359,8 +381,3 @@ body {
     
 }
 
-@media only screen and (max-height: 1000px) {
-.imageText {
-    opacity: 1;
-}
-}
